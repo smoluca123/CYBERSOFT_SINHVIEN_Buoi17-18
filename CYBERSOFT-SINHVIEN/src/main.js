@@ -66,8 +66,8 @@ function svDiemHon5(listSV) {
 function sapXepTang(listSV) {
   var listSVClone = [...listSV];
   for (var i = 0; i < listSVClone.length; i++) {
-    for (var j = 0; j < listSVClone.length; j++) {
-      if (listSVClone[i].diem > listSVClone[j].diem) {
+    for (var j = i + 1; j < listSVClone.length; j++) {
+      if (listSVClone[i].diem < listSVClone[j].diem) {
         var temp = listSVClone[i];
         listSVClone[i] = listSVClone[j];
         listSVClone[j] = temp;
